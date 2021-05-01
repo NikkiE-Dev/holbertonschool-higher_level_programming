@@ -1,0 +1,1 @@
+Learning how to use map, lambda, reduce, filter functions in python
