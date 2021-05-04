@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This module is how you create a class."""
 class Square:
     """ This is how you create a simple class."""
     def __init__(self, size):
