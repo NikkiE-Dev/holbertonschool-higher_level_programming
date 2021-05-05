@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This is how you create a module and that is it."""
+""" This is how you create a module."""
 
 
 class Square:
@@ -7,6 +7,7 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """This is how you create instantiation with size defined"""
+
         self.__position = position
         self.__size = size
         """This is how you create a private attribute in a class"""
@@ -44,7 +45,7 @@ class Square:
             return
         for x in range(self.__size):
             for x in range(0, self.__position[0]):
-                print(" ". end="")
+                print(" ", end="")
             for x in range(self.__size):
                 print("#", end="")
             print()
