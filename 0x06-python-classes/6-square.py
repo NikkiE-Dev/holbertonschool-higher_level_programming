@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" This is how you create a module."""
+""" This is how you create a module and that is it."""
 
 
 class Square:
