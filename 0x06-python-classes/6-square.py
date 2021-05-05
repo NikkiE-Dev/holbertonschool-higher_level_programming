@@ -39,18 +39,15 @@ class Square:
     def my_print(self):
         if self.__size == 0:
             print()
-
-        char = "#"
-        sp = (" ")
-        for x in range(0, self.__position[1]):
+        for x in range(self.__position[1]):
             print()
             return
-        for x in range(0, self.__size):
+        for x in range(self.__size):
             for x in range(0, self.__position[0]):
-                print(sp)
-            for x in range(0, self.__size):
-                print(self.__size * char)
-
+                print(" ". end="")
+            for x in range(self.__size):
+                print("#", end="")
+            print()
     @property
     def position(self):
         return self.__position
