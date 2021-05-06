@@ -11,7 +11,8 @@ class Square:
         self.__position = position
         self.__size = size
         """This is how you create a private attribute in a class"""
-
+        if not isinstance(position, tuple) or min(position) < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
         if not (isinstance(size, int)):
             raise TypeError("size must be an integer")
 
@@ -37,6 +38,16 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    @property
+    def position(self):
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        if not isinstance(value, tuple) or min(value) < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__position = value
+
     def my_print(self):
         if self.__size == 0:
             print()
@@ -49,19 +60,3 @@ class Square:
             for x in range(self.__size):
                 print("#", end="")
             print()
-
-    @property
-    def position(self):
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        if not (isinstance(value, tuple)):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif len(value) < 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif not isinstance(value[0], int) or not isinstance(value[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        elif value[0] or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
