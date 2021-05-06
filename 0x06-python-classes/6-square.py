@@ -11,7 +11,7 @@ class Square:
         self.__position = position
         self.__size = size
         """This is how you create a private attribute in a class"""
-        if not isinstance(position, tuple) or min(position) < 0:
+        if not isinstance(position, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
         if len(position) < 2:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -23,7 +23,6 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        """Checks if size is an int & is greater than or equal to 0"""
 
     def area(self):
         """This is how you create a public instance method"""
