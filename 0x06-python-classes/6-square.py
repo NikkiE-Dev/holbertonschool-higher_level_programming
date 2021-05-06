@@ -13,6 +13,8 @@ class Square:
         """This is how you create a private attribute in a class"""
         if not isinstance(position, tuple) or min(position) < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
+        if len(position) < 2:
+            raise TypeError("position must be a tuple of 2 positive integers")
         if not (isinstance(size, int)):
             raise TypeError("size must be an integer")
 
