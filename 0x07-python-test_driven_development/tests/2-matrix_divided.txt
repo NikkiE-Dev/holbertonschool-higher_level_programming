@@ -36,6 +36,8 @@ TypeError: matrix_divided() missing 1 required positional argument: 'div'
 Traceback (most recent call last):
       ...
 TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+>>> matrix = [[2, 4, 6], [8, 10, 12]]
+>>> matrix_divided(matrix, 0)
 Traceback (most recent call last):
       ...
 ZeroDivisionError: division by zero
