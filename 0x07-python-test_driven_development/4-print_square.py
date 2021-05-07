@@ -2,8 +2,7 @@
 """
 In this module size is the size length of the square
 size must be an integer, size is less than 0,
-and that size is not a comionation of
-a float and is less than 0.
+and that size is not a combo of a float and is less than 0.
 """
 
 
