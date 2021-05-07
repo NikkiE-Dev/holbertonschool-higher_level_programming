@@ -29,11 +29,11 @@ def matrix_divided(matrix, div):
         list2 = []
         new_matrix = []
         for i in matrix[0]:
-            qt = round((i / 3), 2)
+            qt = round((i / div), 2)
             list1.append(qt)
         new_matrix.append(list1)
         for i in matrix[1]:
-            qt = round((i / 3), 2)
+            qt = round((i / div), 2)
             list2.append(qt)
         new_matrix.append(list2)
         return new_matrix
