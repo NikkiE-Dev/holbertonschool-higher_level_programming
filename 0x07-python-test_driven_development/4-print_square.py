@@ -8,7 +8,8 @@ a float and is less than 0.
 
 
 def print_square(size):
-    """This is how you create instantiation with size defined"""
+    """This is how you create instantiation with size define\
+"""
     if isinstance(size, float) and size < 0:
         raise TypeError("size must be an integer")
 
