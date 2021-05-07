@@ -21,9 +21,9 @@ def matrix_divided(matrix, div):
             raise TypeError(
                 "Each row of the matrix must have the same size")
     if not isinstance(div, (int, float)):
-        raise TypeError ("div must be a number")
+        raise TypeError("div must be a number")
     if div == 0:
-        raise ZeroDivisionError ("division by zero")
+        raise ZeroDivisionError("division by zero")
     else:
         list1 = []
         list2 = []
@@ -32,8 +32,11 @@ def matrix_divided(matrix, div):
             qt = round((i / div), 2)
             list1.append(qt)
         new_matrix.append(list1)
-        for i in matrix[1]:
-            qt = round((i / div), 2)
-            list2.append(qt)
-        new_matrix.append(list2)
-        return new_matrix
+        try:
+            for i in matrix[1]:
+                qt = round((i / div), 2)
+                list2.append(qt)
+            new_matrix.append(list2)
+            return new_matrix
+        except IndexError:
+            return new_matrix
