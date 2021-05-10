@@ -1,0 +1,1 @@
+Learn how Python works with different types of objects.
