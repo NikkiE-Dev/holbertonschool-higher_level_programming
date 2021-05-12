@@ -6,4 +6,4 @@ def read_file(filename=""):
     """This class defines the parameters of the function"""
 
     with open(filename, encoding="utf-8") as myFile:
-        print(myFile.read())
+        print(myFile.read(), end='')
