@@ -23,4 +23,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertIsNone(max_integer([]))
 
     def test_one_elem(self):
-        self.assertRaises(TypeError, max_integer([2]))
+        self.assertEqual(max_integer([2]), 2)
+
+    def test_max_in_beg(self):
+        self.assertEqual(max_integer([10, 9, 8, 7]), 10)
