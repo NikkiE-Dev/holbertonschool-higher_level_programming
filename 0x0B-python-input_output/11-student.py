@@ -25,6 +25,6 @@ class Student:
                 return newAttrs
 
     def reload_from_json(self, json):
-        self.first_name = json['first_name']
-        self.last_name = json['last_name']
-        self.age = json['age']
+       for key in json:
+           setattr(self, key, json[key])
+       
