@@ -1,16 +1,10 @@
 #!/usr/bin/python3
-"""This module is for Unittest is for Base"""
+"""Unittest for Base"""
+import unittest
+from models.base import Base
 
 
-class Base:
-    """This is the base for the rectangle"""
+class TestBase(unitest.TestCase):
 
-    __nb_objects = 0
-
-    def __init__(self, id=None):
-
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+    def test(self):
+        self.assertEqual(Base(), 1)
