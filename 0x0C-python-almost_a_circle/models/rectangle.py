@@ -31,6 +31,7 @@ class Rectangle(Base):
             raise TypeError('y must be an integer')
         if y < 0:
             raise ValueError('y must be >= 0')
+
     @property
     def width(self):
         return self.__width
