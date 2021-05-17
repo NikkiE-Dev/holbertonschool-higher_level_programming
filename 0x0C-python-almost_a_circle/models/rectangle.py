@@ -100,7 +100,7 @@ class Rectangle(Base):
                 rect += ("\n")
         print(rect)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Replacing items with updated args"""
         if len(args):
             for i, e in enumerate(args):
@@ -114,6 +114,18 @@ class Rectangle(Base):
                     self.x = e
                 if i == 4:
                     self.y = e
+        elif kwargs is not None:
+            for (a, b) in kwargs.items():
+                if a == 'id':
+                    self.id = b
+                if a == 'width':
+                    self.width = b
+                if a == 'height':
+                    self.height = b
+                if a == 'x':
+                    self.x = b
+                if a == 'y':
+                    self.y = b
 
     def __str__(self):
         """Returning in format [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
