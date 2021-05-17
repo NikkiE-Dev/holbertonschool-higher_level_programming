@@ -9,10 +9,10 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
         if not isinstance(width, int):
@@ -99,6 +99,21 @@ class Rectangle(Base):
             if i != self.height - 1:
                 rect += ("\n")
         print(rect)
+
+    def update(self, *args):
+        """Replacing items with updated args"""
+        if len(args):
+            for i, e in enumerate(args):
+                if i == 0:
+                    self.id = e
+                if i == 1:
+                    self.width = e
+                if i == 2:
+                    self.height = e
+                if i == 3:
+                    self.x = e
+                if i == 4:
+                    self.y = e
 
     def __str__(self):
         """Returning in format [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
