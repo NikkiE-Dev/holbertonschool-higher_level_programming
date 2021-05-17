@@ -89,7 +89,11 @@ class Rectangle(Base):
         if self.width == 0 or self.height == 0:
             return ("")
         rect = ""
+        for yspaces in range(self.y):
+            print()
         for i in range(self.height):
+            for xspaces in range(self.x):
+                rect += " "
             for j in range(self.width):
                 rect += "#"
             if i != self.height - 1:
