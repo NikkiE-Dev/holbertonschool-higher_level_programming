@@ -35,7 +35,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        dumm_list = cls(2, 2)
+        dumm_list = cls(2, 1)
         dumm_list.update(**dictionary)
         return dumm_list
 
