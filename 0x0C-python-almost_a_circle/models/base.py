@@ -33,8 +33,10 @@ class Base:
         nw_lst = []
         cls_name = cls.__name__
         if list_objs is None:
+            wrt = cls.to_json_string(nw_lst)
             with open(cls_name + '.json', 'w', encoding='utf-8') as newFile:
-                newFile.write(nw_lst)
+                newFile.write(wrt)
+            return
         for item in list_objs:
             if issubclass(type(item), Base):
                 nw_lst.append(item.to_dictionary())
