@@ -35,7 +35,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        dumm_list = cls(2, 1)
+        if cls.__name__== "Rectangle":
+            dumm_list = cls(2, 1)
+        if cls.__name__== "Square":
+            dumm_list = cls(1)
         dumm_list.update(**dictionary)
         return dumm_list
 
