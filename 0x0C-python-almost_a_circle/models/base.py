@@ -33,7 +33,7 @@ class Base:
         nw_lst = []
         cls_name = cls.__name__
         if list_objs is None:
-            return nw_lst
+            return "[]"
         for item in list_objs:
             if issubclass(type(item), Base):
                 nw_lst.append(item.to_dictionary())
