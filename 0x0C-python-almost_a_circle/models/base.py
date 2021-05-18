@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module is for Unittest is for Base"""
 import json
+import os
 
 
 class Base:
@@ -60,3 +61,16 @@ class Base:
         wrt = cls.to_json_string(nw_lst)
         with open(cls_name + '.json', 'w', encoding='utf-8') as newFile:
             newFile.write(wrt)
+
+    @classmethod
+    def load_from_file(cls):
+        cls_name = cls.__name__
+        nw_lst = []
+        if not os.path.exists(cls_name + ".json"):
+            return []
+        with open(cls_name + '.json', 'r', encoding='utf-8') as newFile:
+              rd =  newFile.read()
+        inst = cls.from_json_string(rd)
+        for item in inst:
+            nw_lst.append(cls.create(**item))
+        return nw_lst
