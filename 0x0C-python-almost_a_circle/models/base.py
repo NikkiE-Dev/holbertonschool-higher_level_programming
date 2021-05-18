@@ -32,7 +32,7 @@ class Base:
         """
         cls_name = cls.__name__
         if list_objs is None:
-            return ("")
+            return []
         nw_lst = []
         for item in list_objs:
             if issubclass(type(item), Base):
