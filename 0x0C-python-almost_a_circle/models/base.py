@@ -34,6 +34,12 @@ class Base:
             return json.loads(json_string)
 
     @classmethod
+    def create(cls, **dictionary):
+        dumm_list = cls(2, 4)
+        dumm_list.update(**dictionary)
+        return dumm_list
+
+    @classmethod
     def save_to_file(cls, list_objs):
         """Adding the class method that writes
         the JSON string representation of list_objs to a file
