@@ -30,10 +30,10 @@ class Base:
         """Adding the class method that writes
         the JSON string representation of list_objs to a file
         """
+        nw_lst = []
         cls_name = cls.__name__
         if list_objs is None:
-            return []
-        nw_lst = []
+            return nw_lst
         for item in list_objs:
             if issubclass(type(item), Base):
                 nw_lst.append(item.to_dictionary())
