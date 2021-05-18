@@ -69,7 +69,7 @@ class Base:
         if not os.path.exists(cls_name + ".json"):
             return []
         with open(cls_name + '.json', 'r', encoding='utf-8') as newFile:
-              rd =  newFile.read()
+            rd = newFile.read()
         inst = cls.from_json_string(rd)
         for item in inst:
             nw_lst.append(cls.create(**item))
