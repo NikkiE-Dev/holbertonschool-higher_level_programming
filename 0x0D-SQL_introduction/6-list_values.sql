@@ -1,2 +1,2 @@
 -- Lists all rows of the table
-SHOW INDEX FROM first_table;
+SHOW * FROM first_table;
