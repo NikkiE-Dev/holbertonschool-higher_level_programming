@@ -1,1 +1,0 @@
-Learning about Makefile, when it is useful and proper times to use it.

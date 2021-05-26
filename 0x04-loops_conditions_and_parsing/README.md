@@ -1,1 +1,0 @@
-Learing about loops parsing with python
