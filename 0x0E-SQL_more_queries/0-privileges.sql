@@ -1,2 +1,2 @@
 -- Lists all privileges of the MySQL users
-SELECT * FROM mysql.user;
+ SHOW GRANTS user_0d_1@localhost, user_0d_2@localhost;
