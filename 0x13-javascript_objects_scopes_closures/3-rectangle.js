@@ -19,6 +19,7 @@ class Rectangle {
         ShowRect += 'X';
       }
     }
+    console.log(ShowRect);
   }
 }
 
