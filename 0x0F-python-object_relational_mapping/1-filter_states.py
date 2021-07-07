@@ -6,6 +6,9 @@ import sys
 
 
 if __name__ == "__main__":
+    username = argv[1]
+    password = argv[2]
+    data = argv[3]
     db = MySQLdb.connect(host='localhost', argv[1], argv[2], argv[3], port=3306)
     pos = db.cursor()
     rows = pos.execute(SELECT * FROM states WHERE states.name LIKE '%N' ORDER BY states.id)
